@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/rocky9" # Imagen base de la máquina virtual
+
+  # Configuración del proveedor Docker
+  config.vm.provider "docker" do |docker|
+    docker.image = "nginx:latest" # Imagen de Docker a utilizar
+    docker.ports = ["80:80"] # Mapeo de puertos del contenedor
+  end
+end

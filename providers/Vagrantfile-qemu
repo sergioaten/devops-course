@@ -1,0 +1,8 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian11lib"  # Imagen base de la máquina virtual
+
+  # Configuración del proveedor libvirt
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.driver = "qemu"  # Especificar el driver qemu
+  end
+end
